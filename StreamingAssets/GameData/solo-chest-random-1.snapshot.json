@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 1,
+  "version": "solo-chest-random-1",
+  "sourceArmorySha256": "af467f218cfe162a79f1fcb5be82e4cb53df26763f4e8af3999037c51a7dc412",
+  "algorithm": "sha256-u32le-reject-v1",
+  "pools": [
+    {
+      "id": "weapon-n1",
+      "kind": "Weapon",
+      "entries": [
+        {
+          "definitionId": "WPN_SWORD_TRAINING",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_STAFF_TRAINING",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_BOW_TRAINING",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_HOLY_TRAINING",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "weapon-n2",
+      "kind": "Weapon",
+      "entries": [
+        {
+          "definitionId": "WPN_SWORD_TRAINING",
+          "weight": 7
+        },
+        {
+          "definitionId": "WPN_STAFF_TRAINING",
+          "weight": 7
+        },
+        {
+          "definitionId": "WPN_BOW_TRAINING",
+          "weight": 7
+        },
+        {
+          "definitionId": "WPN_HOLY_TRAINING",
+          "weight": 7
+        },
+        {
+          "definitionId": "WPN_SWORD_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_STAFF_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_BOW_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_HOLY_RUNIC",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "weapon-n3",
+      "kind": "Weapon",
+      "entries": [
+        {
+          "definitionId": "WPN_SWORD_TRAINING",
+          "weight": 2
+        },
+        {
+          "definitionId": "WPN_STAFF_TRAINING",
+          "weight": 2
+        },
+        {
+          "definitionId": "WPN_BOW_TRAINING",
+          "weight": 2
+        },
+        {
+          "definitionId": "WPN_HOLY_TRAINING",
+          "weight": 2
+        },
+        {
+          "definitionId": "WPN_SWORD_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_STAFF_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_BOW_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_HOLY_RUNIC",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "weapon-e1",
+      "kind": "Weapon",
+      "entries": [
+        {
+          "definitionId": "WPN_SWORD_TRAINING",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_STAFF_TRAINING",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_BOW_TRAINING",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_HOLY_TRAINING",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_SWORD_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_STAFF_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_BOW_RUNIC",
+          "weight": 3
+        },
+        {
+          "definitionId": "WPN_HOLY_RUNIC",
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "weapon-b1",
+      "kind": "Weapon",
+      "entries": [
+        {
+          "definitionId": "WPN_SWORD_RUNIC",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_STAFF_RUNIC",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_BOW_RUNIC",
+          "weight": 1
+        },
+        {
+          "definitionId": "WPN_HOLY_RUNIC",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "stone-early",
+      "kind": "AbilityStone",
+      "entries": [
+        {
+          "definitionId": "STONE_WAR_CHARGE",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_WAR_BASH",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_WAR_SHOUT",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_FIREBALL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_ICEWALL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_BLINK",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_TRAP",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_HEA_HEAL",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "stone-mid",
+      "kind": "AbilityStone",
+      "entries": [
+        {
+          "definitionId": "STONE_WAR_CHARGE",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_WAR_BASH",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_WAR_SHOUT",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_FIREBALL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_ICEWALL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_BLINK",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_TRAP",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_HEA_HEAL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_PIERCE",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_RETREAT",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_HEA_BOLT",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "stone-full",
+      "kind": "AbilityStone",
+      "entries": [
+        {
+          "definitionId": "STONE_WAR_CHARGE",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_WAR_BASH",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_WAR_SHOUT",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_FIREBALL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_ICEWALL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_BLINK",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_PIERCE",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_TRAP",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_RETREAT",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_HEA_BOLT",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_HEA_HEAL",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_HEA_WARD",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_WAR_JAVELIN",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_MAG_PULSE",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_ARC_CHECK",
+          "weight": 1
+        },
+        {
+          "definitionId": "STONE_HEA_BURST",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "rune-common",
+      "kind": "Rune",
+      "entries": [
+        {
+          "definitionId": "RUNE_FOCUS",
+          "weight": 1
+        },
+        {
+          "definitionId": "RUNE_VIGOR",
+          "weight": 1
+        }
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "roomId": "N1",
+      "weaponPool": "weapon-n1",
+      "stonePool": "stone-early",
+      "runePool": "rune-common"
+    },
+    {
+      "roomId": "N2",
+      "weaponPool": "weapon-n2",
+      "stonePool": "stone-mid",
+      "runePool": "rune-common"
+    },
+    {
+      "roomId": "N3",
+      "weaponPool": "weapon-n3",
+      "stonePool": "stone-full",
+      "runePool": "rune-common"
+    },
+    {
+      "roomId": "E1",
+      "weaponPool": "weapon-e1",
+      "stonePool": "stone-full",
+      "runePool": "rune-common"
+    },
+    {
+      "roomId": "B1",
+      "weaponPool": "weapon-b1",
+      "stonePool": "stone-full",
+      "runePool": "rune-common"
+    }
+  ]
+}

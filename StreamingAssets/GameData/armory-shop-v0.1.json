@@ -1,0 +1,11 @@
+{
+  "version": "armory-shop-0.1",
+  "offers": [
+    {"id":"WPN_SWORD_TRAINING","kind":0,"price":120},
+    {"id":"WPN_STAFF_TRAINING","kind":0,"price":120},
+    {"id":"WPN_BOW_TRAINING","kind":0,"price":120},
+    {"id":"WPN_HOLY_TRAINING","kind":0,"price":120},
+    {"id":"STONE_HEA_HEAL","kind":1,"price":90},
+    {"id":"STONE_MAG_BLINK","kind":1,"price":120}
+  ]
+}

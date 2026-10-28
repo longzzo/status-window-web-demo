@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>상..ㅅ 상태창!! — 웹 체험판</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,"Malgun Gothic",sans-serif;background:#0b161b;color:#e8f5f2}*{box-sizing:border-box}body{margin:0}header{height:56px;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #2b4447}h1{font-size:18px;margin:0}header small{color:#9cbab5;font-size:12px}button{background:#61dec0;color:#102720;border:0;border-radius:8px;padding:12px 20px;cursor:pointer;font-weight:700}button:disabled{opacity:.5}header button{padding:8px 12px}main{position:relative;width:100%;height:calc(100dvh - 56px);min-height:420px;overflow:hidden;background:#111f25}canvas{display:block;width:100%;height:100%;outline:none}#cover{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 20%,#224a4b,#0b161b 70%);padding:24px}.card{max-width:720px;width:100%;line-height:1.65}h2{font-size:clamp(27px,5vw,44px);line-height:1.2;margin:0 0 16px}.tag{color:#61dec0;letter-spacing:.15em;font-size:12px}p{color:#b7d0cb}.keys{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:18px 0 24px}.keys div{padding:8px 12px;background:#ffffff06;border:1px solid #ffffff12;border-radius:6px}kbd{color:#77ead0;font-family:inherit;font-weight:700}progress{width:100%;height:10px;accent-color:#61dec0}#status{min-height:28px;color:#9db7b2;font-size:14px}details{font-size:13px;color:#9db7b2;margin-top:20px}summary{cursor:pointer}#save-warning{position:fixed;bottom:12px;left:12px;right:12px;background:#6d371b;color:#fff;padding:12px;z-index:20}#error{white-space:pre-wrap;color:#ffcba8}a{color:#77ead0}#cover[hidden]{display:none}
+</style></head><body>
+<header><h1>상..ㅅ 상태창!! <small>솔로 웹 체험판 · R122</small></h1><button id="fullscreen">전체화면</button></header>
+<main id="game"><canvas id="unity-canvas" tabindex="0" aria-label="상태창 게임 화면"></canvas><section id="cover"><div class="card">
+<div class="tag">VOICE × DUNGEON × WEAPONS</div><h2>목소리로 주문을.<br>무기로 나만의 모험을.</h2>
+<p>무기를 고르고, 야영지에서 준비한 뒤 던전으로 출발하세요.<br>적을 물리쳐 상자를 열고, 무기와 능력석으로 다음 전투를 준비합니다.</p>
+<div class="keys"><div><kbd>W A S D</kbd> 이동 · <kbd>마우스</kbd> 시점</div><div><kbd>좌클릭</kbd> 기본 공격</div><div><kbd>우클릭 / V</kbd> 누르고 주문 말하기</div><div><kbd>E</kbd> 가방 · <kbd>F</kbd> 상호작용</div><div><kbd>1–4 / 휠</kbd> 무기 교체</div><div><kbd>Space</kbd> 회피 · <kbd>C</kbd> 상태창</div></div>
+<button id="start">게임 불러오기</button> <span id="size"></span>
+<p id="status">PC Chrome·Edge와 키보드·마우스를 권장합니다.</p><progress id="progress" value="0" max="1" hidden></progress><div id="error" role="alert"></div>
+<details><summary>마이크·저장·체험판 안내</summary>
+<p>마이크는 게임 안에서 동의한 뒤 사용합니다. 웹판은 브라우저 음성 인식을 사용하며, 소리가 브라우저 제공자의 서비스로 전송될 수 있습니다. 인터넷과 지원 브라우저가 필요합니다. 한국어/영어는 마이크 설정에서 선택합니다. Windows판의 로컬 Whisper와 속도·인식 결과가 다를 수 있습니다.</p>
+<p>음성이 지원되지 않으면 5–8 보조 키로 장착 스킬을 쓸 수 있습니다. 마우스 잠금이 풀리면 게임 화면을 클릭하세요. 저장은 현재 브라우저·주소에 보관하며 탭 간 공유를 피해주세요. 사이트 데이터 삭제·비공개 모드에서는 진행이 없어질 수 있습니다. 마지막 행동 뒤 약 3초 기다리고 닫아 주세요.</p>
+<p>과제 제출용 임시 솔로 프로토타입입니다. 멀티·Steam은 포함하지 않습니다. 마이크 실발화와 지속 주문 반응성은 기기별 확인이 필요합니다.</p>
+</details></div></section></main><div id="save-warning" role="alert" hidden></div>
+<script>
+let instance;
+const canvas=document.getElementById('unity-canvas'),status=document.getElementById('status');
+canvas.addEventListener('contextmenu',e=>e.preventDefault());
+document.getElementById('fullscreen').onclick=()=>{const game=document.getElementById('game');if(document.fullscreenElement)document.exitFullscreen();else game.requestFullscreen().catch(e=>status.textContent=e.message);};
+window.addEventListener('unhandledrejection',e=>{document.getElementById('error').textContent=String(e.reason);});
+document.getElementById('start').onclick=async()=>{
+ document.getElementById('start').disabled=true;document.getElementById('progress').hidden=false;status.textContent='게임 파일을 준비하고 있습니다. 첫 실행은 시간이 걸릴 수 있습니다.';
+ try{
+  const manifest=await fetch('web-manifest.json').then(r=>{if(!r.ok)throw Error('빌드 목록을 읽지 못했습니다.');return r.json();});
+  document.getElementById('size').textContent='약 '+Math.ceil(manifest.totalBytes/1048576)+' MB';
+  const nativeFetch=window.fetch.bind(window),splitMap=new Map(Object.entries(manifest.split||{}).map(([key,value])=>[new URL(key,location.href).href,value]));
+  window.fetch=async function(input,options){const url=typeof input==='string'?new URL(input,location.href).href:input.url;const parts=splitMap.get(url);if(!parts)return nativeFetch(input,options);
+    const stream=new ReadableStream({async start(controller){try{for(const part of parts.files){const response=await nativeFetch(part,options);if(!response.ok)throw Error('파일 다운로드 실패: '+part);const reader=response.body.getReader();for(;;){const data=await reader.read();if(data.done)break;controller.enqueue(data.value);}}controller.close();}catch(e){controller.error(e);}}});
+    return new Response(stream,{status:200,headers:{'Content-Type':'application/octet-stream','Content-Length':String(parts.bytes)}});
+  };
+  await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=manifest.loader;s.onload=resolve;s.onerror=()=>reject(Error('Unity 로더 다운로드 실패'));document.body.appendChild(s);});
+  instance=await createUnityInstance(canvas,{...manifest.config,showBanner:(message,type)=>{if(type==='error'){document.getElementById('cover').hidden=false;document.getElementById('error').textContent=message;}}},p=>{document.getElementById('progress').value=p;status.textContent='게임 준비 중 '+Math.round(p*100)+'%';});
+  document.getElementById('cover').hidden=true;canvas.focus();
+ }catch(error){status.textContent='불러오지 못했습니다. 새로고침하거나 다른 PC 브라우저로 시도하세요.';document.getElementById('error').textContent=String(error);}
+};
+</script></body></html>

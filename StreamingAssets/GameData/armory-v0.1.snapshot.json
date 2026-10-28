@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "version": "armory-0.1",
+  "sourceGameDataSha256": "962973d0bb83f3b81ece29234dcb22aedd74bf0ba3ae2a6dadd8f5c5681538a6",
+  "commonBase": [
+    12,
+    12,
+    220,
+    12,
+    12,
+    100
+  ],
+  "capacities": [
+    40,
+    64,
+    64
+  ],
+  "weapons": [
+    {
+      "id": "WPN_SWORD_TRAINING",
+      "name": "훈련용 검과 방패",
+      "family": 1,
+      "basicAttackId": "BASIC_WAR",
+      "stoneSockets": 4,
+      "requirements": []
+    },
+    {
+      "id": "WPN_SWORD_RUNIC",
+      "name": "룬 각인 검과 방패",
+      "family": 1,
+      "basicAttackId": "BASIC_WAR",
+      "stoneSockets": 4,
+      "requirements": [
+        {
+          "stat": "Attack",
+          "minimum": 16
+        }
+      ]
+    },
+    {
+      "id": "WPN_STAFF_TRAINING",
+      "name": "훈련용 지팡이",
+      "family": 2,
+      "basicAttackId": "BASIC_MAG",
+      "stoneSockets": 4,
+      "requirements": []
+    },
+    {
+      "id": "WPN_STAFF_RUNIC",
+      "name": "룬 각인 지팡이",
+      "family": 2,
+      "basicAttackId": "BASIC_MAG",
+      "stoneSockets": 4,
+      "requirements": [
+        {
+          "stat": "SpellPower",
+          "minimum": 16
+        }
+      ]
+    },
+    {
+      "id": "WPN_BOW_TRAINING",
+      "name": "훈련용 활",
+      "family": 4,
+      "basicAttackId": "BASIC_ARC",
+      "stoneSockets": 4,
+      "requirements": []
+    },
+    {
+      "id": "WPN_BOW_RUNIC",
+      "name": "룬 각인 활",
+      "family": 4,
+      "basicAttackId": "BASIC_ARC",
+      "stoneSockets": 4,
+      "requirements": [
+        {
+          "stat": "Attack",
+          "minimum": 16
+        }
+      ]
+    },
+    {
+      "id": "WPN_HOLY_TRAINING",
+      "name": "훈련용 성물",
+      "family": 8,
+      "basicAttackId": "BASIC_HEA",
+      "stoneSockets": 4,
+      "requirements": []
+    },
+    {
+      "id": "WPN_HOLY_RUNIC",
+      "name": "룬 각인 성물",
+      "family": 8,
+      "basicAttackId": "BASIC_HEA",
+      "stoneSockets": 4,
+      "requirements": [
+        {
+          "stat": "SpellPower",
+          "minimum": 16
+        }
+      ]
+    }
+  ],
+  "stones": [
+    {
+      "id": "STONE_WAR_CHARGE",
+      "name": "돌진 능력석",
+      "skillId": "WAR_CHARGE",
+      "families": 1
+    },
+    {
+      "id": "STONE_WAR_BASH",
+      "name": "방패 강타 능력석",
+      "skillId": "WAR_BASH",
+      "families": 1
+    },
+    {
+      "id": "STONE_WAR_SHOUT",
+      "name": "전투 함성 능력석",
+      "skillId": "WAR_SHOUT",
+      "families": 15
+    },
+    {
+      "id": "STONE_MAG_FIREBALL",
+      "name": "화염구 능력석",
+      "skillId": "MAG_FIREBALL",
+      "families": 15
+    },
+    {
+      "id": "STONE_MAG_ICEWALL",
+      "name": "서리 장벽 능력석",
+      "skillId": "MAG_ICEWALL",
+      "families": 15
+    },
+    {
+      "id": "STONE_MAG_BLINK",
+      "name": "순간 이동 능력석",
+      "skillId": "MAG_BLINK",
+      "families": 15
+    },
+    {
+      "id": "STONE_ARC_PIERCE",
+      "name": "관통 사격 능력석",
+      "skillId": "ARC_PIERCE",
+      "families": 4
+    },
+    {
+      "id": "STONE_ARC_TRAP",
+      "name": "속박 덫 능력석",
+      "skillId": "ARC_TRAP",
+      "families": 15
+    },
+    {
+      "id": "STONE_ARC_RETREAT",
+      "name": "후퇴 도약 능력석",
+      "skillId": "ARC_RETREAT",
+      "families": 4
+    },
+    {
+      "id": "STONE_HEA_BOLT",
+      "name": "성광 탄환 능력석",
+      "skillId": "HEA_BOLT",
+      "families": 15
+    },
+    {
+      "id": "STONE_HEA_HEAL",
+      "name": "치유 능력석",
+      "skillId": "HEA_HEAL",
+      "families": 15
+    },
+    {
+      "id": "STONE_HEA_WARD",
+      "name": "보호 결계 능력석",
+      "skillId": "HEA_WARD",
+      "families": 15
+    },
+    {
+      "id": "STONE_WAR_JAVELIN",
+      "name": "룬 투창 능력석",
+      "skillId": "WAR_JAVELIN",
+      "families": 15
+    },
+    {
+      "id": "STONE_MAG_PULSE",
+      "name": "마력 파동 능력석",
+      "skillId": "MAG_PULSE",
+      "families": 15
+    },
+    {
+      "id": "STONE_ARC_CHECK",
+      "name": "견제 사격 능력석",
+      "skillId": "ARC_CHECK",
+      "families": 4
+    },
+    {
+      "id": "STONE_HEA_BURST",
+      "name": "광휘 폭발 능력석",
+      "skillId": "HEA_BURST",
+      "families": 15
+    }
+  ],
+  "runes": [
+    {
+      "id": "RUNE_FOCUS",
+      "name": "집중 룬",
+      "families": 15,
+      "damageMultiplier": 1.05,
+      "staminaMultiplier": 1
+    },
+    {
+      "id": "RUNE_VIGOR",
+      "name": "활력 룬",
+      "families": 15,
+      "damageMultiplier": 1,
+      "staminaMultiplier": 0.95
+    }
+  ]
+}

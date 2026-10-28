@@ -1,0 +1,6 @@
+{
+  "version": "mvp-encounters-0.1",
+  "roomId": "N1",
+  "enemyHealthMultiplier": 0.35,
+  "hypothesis": "Common spell power 12 replaces legacy starting mage 26+10. Shorten first encounter while preserving enemy count, damage and tells. Human fun unverified."
+}

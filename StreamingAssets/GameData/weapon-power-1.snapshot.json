@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "version": "weapon-power-1",
+  "armorySha256": "af467f218cfe162a79f1fcb5be82e4cb53df26763f4e8af3999037c51a7dc412",
+  "weapons": [
+    {
+      "id": "WPN_SWORD_TRAINING",
+      "basicDamageBasisPoints": 10000
+    },
+    {
+      "id": "WPN_SWORD_RUNIC",
+      "basicDamageBasisPoints": 11000
+    },
+    {
+      "id": "WPN_STAFF_TRAINING",
+      "basicDamageBasisPoints": 10000
+    },
+    {
+      "id": "WPN_STAFF_RUNIC",
+      "basicDamageBasisPoints": 11000
+    },
+    {
+      "id": "WPN_BOW_TRAINING",
+      "basicDamageBasisPoints": 10000
+    },
+    {
+      "id": "WPN_BOW_RUNIC",
+      "basicDamageBasisPoints": 11000
+    },
+    {
+      "id": "WPN_HOLY_TRAINING",
+      "basicDamageBasisPoints": 10000
+    },
+    {
+      "id": "WPN_HOLY_RUNIC",
+      "basicDamageBasisPoints": 11000
+    }
+  ]
+}
